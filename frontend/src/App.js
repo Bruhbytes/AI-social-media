@@ -1,7 +1,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-const backendUrl = process.env.REACT_APP_URL;
+// const backendUrl = process.env.REACT_APP_URL;
+const backendUrl = "https://ai-social-media-server.vercel.app"
 
 function App() {
   const [data, setData] = useState(null);

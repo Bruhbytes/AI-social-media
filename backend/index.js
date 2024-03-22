@@ -1,0 +1,21 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+require('dotenv').config()
+const cors = require('cors');
+
+
+const app = express();
+app.use(cors({
+    origin: [`${process.env.FRONTEND_URL}`],
+}))
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(express.json());
+
+
+app.get('/', (req, res) => {
+    res.status(200).json({"msg":"Hello world"});
+})
+
+app.listen(4000, (req, res) => {
+    console.log("Server started on port 4000");
+})

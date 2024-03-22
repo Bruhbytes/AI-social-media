@@ -1,0 +1,77 @@
+/* home.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  padding: 10px 20px;
+  color: #fff;
+  position: fixed; /* Fixed position to keep the navbar at the top */
+  top: 0; /* Position at the top of the viewport */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it's above other content */
+  border-radius: 10px;
+}
+.container {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('../../../public/images/background.jpg'); /* Background image */  
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the background image */
+}
+
+.company-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5px; /* Add margin to separate from top */
+  margin-right: 20px; /* Add right margin */
+  margin-left: 20px;
+  color: #C499F3; /* Company name color */
+  font-family: 'Poppins', sans-serif; /* Specify font family */
+}
+
+.nav-links {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.nav-link.signup {
+  background-color: #F2AFEF; /* Updated button background color */
+  color: #fff; /* White text color */
+  margin-right: 20px; /* Add right margin */
+}
+
+.nav-link.login {
+  background-color: #F2AFEF; /* Updated button background color */
+  color: #fff; /* White text color */
+}
+.tab {
+  display: flex; /* Make the container a flex container */
+  justify-content: center; /* Center align items horizontally */
+  align-items: center; /* Center align items vertically */
+  flex-grow: 1; /* Grow to take available space */
+}
+
+.nav-link.tab {
+  background-color: #F2AFEF; /* Background color */
+  color: #fff; /* Text color */
+  padding: 8px 16px; /* Padding */
+  border: 1px solid #fff; /* Border */
+  border-radius: 5px; /* Border radius */
+  margin: 0 10px; /* Add margin to create space between tabs */
+}
+
+.nav-link.tab:hover {
+  background-color: #DF98D7; /* Hover background color */
+  color: #fff; /* Hover text color */
+}

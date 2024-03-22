@@ -1,0 +1,70 @@
+/* App.css */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+}
+
+.company-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.auth-links {
+  display: flex;
+}
+
+.auth-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.auth-link.signup {
+  background-color: #333;
+  color: #fff;
+}
+
+.main-content {
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab-button:last-child {
+  margin-right: 0;
+}
+
+/* Additional styles for Login and Signup pages if needed */

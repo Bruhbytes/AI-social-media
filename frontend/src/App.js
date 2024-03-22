@@ -1,34 +1,47 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Homepage from "./pages/Homepage";
 // const backendUrl = process.env.REACT_APP_URL;
 const backendUrl = "https://ai-social-media-server.vercel.app"
 
-function App() {
-  const [data, setData] = useState(null);
+function App() {  
+  const [user, setUser] = useState(null);
+
+  const getUser = async () => {
+    try {
+      const url = `${backendUrl}/auth/login/success`;
+      // const url = `${process.env.REACT_APP_URL}/auth/login/success`;
+      const { data } = await axios.get(url, { withCredentials: true });
+      setUser(data.user._json);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = () => {
-      axios.get(`${backendUrl}/`)
-        .then(async (response) => {
-          if (response.status !== 200) {
-            console.log("Could not get data");
-          }
-          else {
-            const jsonData = await response.data;
-            setData(jsonData);
-            console.log(jsonData)
-          }
-        })
-    }
-
-    fetchData();
+    getUser();
   }, [])
 
   return (
     <div className="App">
-      <h1>Hello</h1>
-      {data && <p>{data.msg}</p>}
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+        <Route
+          exact
+          path="/login"
+          element={user ? <Navigate to="/" /> : <Login />}
+        />
+        <Route
+          path="/signup"
+          element={user ? <Navigate to="/" /> : <Signup />}
+        />
+      </Routes>
     </div>
   );
 }

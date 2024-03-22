@@ -11,6 +11,10 @@ app.use(cors({
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.json());
 
+app.use((req, res, next) => {
+    console.log(req.path, req.method);
+    next();
+})
 
 app.get('/', (req, res) => {
     res.status(200).json({"msg":"Hello world"});

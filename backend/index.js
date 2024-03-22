@@ -12,8 +12,8 @@ const frontendUrl = "https://ai-social-media-client.vercel.app";
 
 const app = express();
 app.use(cors({
-    // origin: ["http://localhost:3000"],    
-    origin: [frontendUrl],
+    origin: ["http://localhost:3000"],    
+    // origin: [frontendUrl],
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
 }))

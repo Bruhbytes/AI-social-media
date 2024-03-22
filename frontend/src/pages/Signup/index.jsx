@@ -3,14 +3,14 @@ import styles from "./styles.module.css";
 const backendUrl = "https://ai-social-media-server.vercel.app"
 function Signup() {
 	const googleAuth = () => {
-		// window.open(
-		// 	`${process.env.REACT_APP_URL}/auth/google/callback`,
-		// 	"_self"
-		// );
 		window.open(
-			`${backendUrl}/auth/google/callback`,
+			`${process.env.REACT_APP_URL}/auth/google/callback`,
 			"_self"
 		);
+		// window.open(
+		// 	`${backendUrl}/auth/google/callback`,
+		// 	"_self"
+		// );
 	};
 	return (
 		<div className={styles.container}>

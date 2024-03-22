@@ -4,14 +4,14 @@ const backendUrl = "https://ai-social-media-server.vercel.app"
 
 function Login() {
 	const googleAuth = () => {
-		window.open(
-			`${backendUrl}/auth/google/callback`,
-			"_self"
-		);
 		// window.open(
-		// 	`${process.env.REACT_APP_URL}/auth/google/callback`,
+		// 	`${backendUrl}/auth/google/callback`,
 		// 	"_self"
 		// );
+		window.open(
+			`${process.env.REACT_APP_URL}/auth/google/callback`,
+			"_self"
+		);
 	};
 	return (
 		<div className={styles.container}>

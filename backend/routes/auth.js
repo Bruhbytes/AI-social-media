@@ -26,16 +26,16 @@ router.get("/google", passport.authenticate("google", ["profile", "email"]));
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    // successRedirect: process.env.FRONTEND_URL,
-    successRedirect: frontendUrl,
+    successRedirect: process.env.FRONTEND_URL,
+    // successRedirect: frontendUrl,
     failureRedirect: "/login/failed",
   })
 );
 
 router.get("/logout", (req, res) => {
   req.logout();
-  // res.redirect(process.env.FRONTEND_URL);
-  res.redirect(frontendUrl);
+  res.redirect(process.env.FRONTEND_URL);
+  // res.redirect(frontendUrl);
 });
 
 module.exports = router;

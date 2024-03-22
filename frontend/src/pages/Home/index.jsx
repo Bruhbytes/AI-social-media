@@ -3,12 +3,12 @@ const backendUrl = "https://ai-social-media-server.vercel.app"
 
 function Home(userDetails) {
 	const user = userDetails.user;
-	const logout = () => {
-		window.open(`${backendUrl}/auth/logout`, "_self");
-	};
 	// const logout = () => {
-	// 	window.open(`${process.env.REACT_APP_URL}/auth/logout`, "_self");
+	// 	window.open(`${backendUrl}/auth/logout`, "_self");
 	// };
+	const logout = () => {
+		window.open(`${process.env.REACT_APP_URL}/auth/logout`, "_self");
+	};
 	return (
 		<div className={styles.container}>
 			<h1 className={styles.heading}>Home</h1>

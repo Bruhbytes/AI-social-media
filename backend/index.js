@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors({
-    origin: [`${process.env.FRONTEND_URL}`],
+    origin: ["https://ai-social-media-client.vercel.app"],
 }))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.json());

@@ -6,6 +6,12 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Homepage from "./pages/Homepage";
+import Home2 from './pages/Home2';
+import Analysis from './pages/Analysis/Analysis';
+import Plagia from './pages/Plagia/Plagia';
+import Generate from './pages/generate/Generate';
+import Schedule from './pages/Schedule/Schedule';
+
 // const backendUrl = process.env.REACT_APP_URL;
 const backendUrl = "https://ai-social-media-server.vercel.app"
 
@@ -35,11 +41,31 @@ function App() {
         <Route
           exact
           path="/login"
-          element={user ? <Navigate to="/" /> : <Login />}
+          element={user ? <Navigate to="/services" /> : <Login />}
         />
         <Route
           path="/signup"
-          element={user ? <Navigate to="/" /> : <Signup />}
+          element={user ? <Navigate to="/services" /> : <Signup />}
+        />
+        <Route
+          path="/services"
+          element={user ? <Home2 /> : <Login />}
+        />
+        <Route
+          path="/services/analysis"
+          element={user ? <Analysis /> : <Login />}
+        />
+        <Route
+          path="/services/plagia"
+          element={user ? <Plagia /> : <Login />}
+        />
+        <Route
+          path="/generate"
+          element= {<Generate />}
+        />
+        <Route
+          path="/services/schedule"
+          element={user ? <Schedule /> : <Login />}
         />
       </Routes>
     </div>

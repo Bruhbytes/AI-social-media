@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./styles.module.css";
+import styles from "./signup.css";
 const backendUrl = "https://ai-social-media-server.vercel.app"
 function Signup() {
 	const googleAuth = () => {
@@ -13,28 +13,28 @@ function Signup() {
 		// );
 	};
 	return (
-		<div className={styles.container}>
-			<h1 className={styles.heading}>Sign up Form</h1>
-			<div className={styles.form_container}>
-				<div className={styles.left}>
-					<img className={styles.img} src="./images/signup.jpg" alt="signup" />
+		<div className="container">
+			<h1 className="heading">Sign up Form</h1>
+			<div className="form_container">
+				<div className="left">
+					<img className="img" src="./images/signup.jpg" alt="signup" />
 				</div>
-				<div className={styles.right}>
-					<h2 className={styles.from_heading}>Create Account</h2>
-					<input type="text" className={styles.input} placeholder="Username" />
-					<input type="text" className={styles.input} placeholder="Email" />
+				<div className="right">
+					<h2 className="from_heading">Create Account</h2>
+					<input type="text" className="input" placeholder="Username" />
+					<input type="text" className="input" placeholder="Email" />
 					<input
 						type="password"
-						className={styles.input}
+						className="input"
 						placeholder="Password"
 					/>
-					<button className={styles.btn}>Sign Up</button>
-					<p className={styles.text}>or</p>
-					<button className={styles.google_btn} onClick={googleAuth}>
+					<button className="btn">Sign Up</button>
+					<p className="text">or</p>
+					<button className="google_btn" onClick={googleAuth}>
 						<img src="./images/google.png" alt="google icon" />
 						<span>Sign up with Google</span>
 					</button>
-					<p className={styles.text}>
+					<p className="text">
 						Already Have Account ? <Link to="/login">Log In</Link>
 					</p>
 				</div>

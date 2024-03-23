@@ -1,0 +1,105 @@
+/* Import Syncfusion material theme */
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+
+/* Sidebar styles */
+.sidebar {
+  box-shadow: 0 7px 30px rgba(113, 122, 131, 0.3); /* Increased opacity for box shadow */
+}
+
+/* Navbar styles */
+.nav-item,
+.navbar {
+  z-index: 10000;
+}
+
+/* Responsive sidebar for smaller screens */
+@media screen and (max-width: 800px) {
+  .sidebar {
+    z-index: 10000000;
+  }
+}
+
+/* Styles for modal dialogs and popups */
+.e-dlg-center-center,
+.e-quick-popup-wrapper.e-device {
+  z-index: 1000000 !important;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d8d8d8;
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Color-picker preview styles */
+#preview {
+  background: transparent url('https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png') no-repeat;
+  display: inline-block;
+  height: 80px;
+  margin: 10px 0;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: #008000;
+}
+
+/* Input group styles */
+.e-input-group:not(.e-float-icon-left),
+.e-input-group.e-success:not(.e-float-icon-left),
+.e-input-group.e-warning:not(.e-float-icon-left),
+.e-input-group.e-error:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left) {
+  border: none;
+}
+
+/* Additional styles for the card container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Adjust as needed */
+  margin-bottom: 20px;
+}
+
+/* Styles for the card */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color:rgb(64, 137, 150); /* Background color for the cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Updated box shadow */
+  border: 1px solid #e2e8f0; /* Border added */
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Styles for the card image */
+.card-image {
+  width: 75%;    
+  border-radius: 8px 8px 0 0;  
+}
+
+/* Styles for card content */
+.card-content {
+  padding: 16px;
+}
+
+/* Title styles */
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Description styles */
+.card-description {
+  font-size: 16px;
+  color: #e6e1e1;
+}

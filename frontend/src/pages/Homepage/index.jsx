@@ -4,16 +4,21 @@ import './home.css'; // Import external CSS file
 
 const Homepage = () => {
   return (
-    <div className="container">
+    <div className='bigCont'>
+    <div className="mycontainer">
       <div className="navbar">
-        <div className="company-name">GitRitz</div>
-        <div className="nav-links">
-          <Link to="/login" className="nav-link login">Login</Link>
-          <Link to="/signup" className="nav-link signup">Signup</Link>
+        <div className="company-name">Social Spark</div>
+        <div className="links">
+          <Link to="/login" className=" login">Login</Link>
+          <Link to="/signup" className=" signup">Signup</Link>
         </div>
       </div>
+    </div>
       <div className="tab">
-        <Link to="/caption-generator" className="nav-link tab">Caption Generator</Link>
+        <p>"Social Spark" is your go-to platform for unleashing the full potential of your online presence</p>
+        <hr />
+        <p>Access the below tool to generate some fun captions for your post</p>
+        <Link to="/generate" className=" tab">Caption Generator</Link>
       </div>
     </div>
   );

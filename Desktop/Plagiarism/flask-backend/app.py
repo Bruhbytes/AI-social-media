@@ -99,7 +99,7 @@
 # if __name__ == '__main__':
 #     app.run(debug=True)
 
-
+# No comments
 from flask import Flask, request, jsonify
 import pandas as pd
 import numpy as np
